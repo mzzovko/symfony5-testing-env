@@ -3,7 +3,7 @@ FROM php:7.4.2-fpm
 # Container dependencies
 # unzip is needed for composer to be able to unzip some dependencies
 RUN apt-get update && apt-get install -y \
-    unzip
+    unzip netcat
 
 # PHP dependencies
 RUN docker-php-ext-install pdo pdo_mysql
