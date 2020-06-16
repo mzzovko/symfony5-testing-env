@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     unzip netcat git
 
 # PHP dependencies
-RUN docker-php-ext-install pdo pdo_mysql ext-sockets
+RUN docker-php-ext-install pdo pdo_mysql sockets
 
 # Add xdebug so we can get test coverage
 RUN pecl install xdebug; \
